@@ -1,0 +1,62 @@
+baseURL = "https://nikhelbig.github.io/"
+languageCode = "en"
+title = "The Psychotherapist — Dr. Nicole Chew-Helbig"
+theme = ""
+paginate = 12
+enableRobotsTXT = true
+enableEmoji = false
+
+[params]
+  description = "Psychotherapy resource and articles by Dr. Nicole Chew-Helbig, PhD — Gestalt Therapist, Couples Therapist, Author, and Researcher based in Singapore."
+  author = "Dr. Nicole Chew-Helbig"
+  practiceURL = "https://psychotherapist.sg"
+  fieldnotesURL = "https://fieldnotes.psychotherapist.sg"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Gestalt Therapy"
+    url = "/gestalt-therapy/"
+    weight = 2
+  [[menu.main]]
+    name = "Couples & Family"
+    url = "/couples-and-family/"
+    weight = 3
+  [[menu.main]]
+    name = "Psychotherapy"
+    url = "/psychotherapy-practice/"
+    weight = 4
+  [[menu.main]]
+    name = "Trauma"
+    url = "/childhood-trauma/"
+    weight = 5
+  [[menu.main]]
+    name = "Publications"
+    url = "/theses-and-publications/"
+    weight = 6
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 7
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
