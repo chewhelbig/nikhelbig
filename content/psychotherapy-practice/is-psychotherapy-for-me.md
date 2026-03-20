@@ -1,0 +1,18 @@
+---
+title: "Is psychotherapy for me?"
+date: 2019-01-13
+draft: false
+description: "Ask yourself these questions to decide if you need psychotherapy."
+tags: ["psychotherapy function", "what can psychotherapy do", "who needs psychtherapy", "who should go for psychotherapy"]
+original_url: "/is-psychotherapy-for-me/"
+---
+
+This article is for the people have landed on this site looking for psychotherapy, and are wondering if psychotherapy is what they need right now. 
+
+![](/wp-content/uploads/2019/01/Screenshot-2019-01-13-at-14.01.32.png)
+
+Here are some questions (in no particular order) to ask yourselves. If one or more of your answers is a "yes", it is probably a good idea for you to speak to a psychotherapist.
+
+- Your doctor / psychiatrist / teacher or other professional advises you to get therapy.- Your loved ones encourage you to seek therapy.- You are looking for answers about your inner experience.- You are experiencing a difficult milestone in your life: leaving home, getting married or divorced, having a child, being diagnosed with illness, migration, etc.- You find yourself in a difficult or abusive relationship at home or at work.- You experience physical reactions that you cannot understand: like panic attacks, crying attacks, rage.- You are having thoughts that are churning in your mind.- You suffer anxiety: social anxiety, phobias, paranoias.- You're not sleeping well: not able to get to sleep, waking up in the middle of the night and not getting back to sleep, not able to wake up, sleeping all day, having nightmares.- You have an overwhelming feeling helplessness.- You have an overwhelming feeling of guilt. You blame yourself for many things.- You harm yourself physically.- You have suicidal thoughts and/or plans.- You are addicted to substance.- You are addicted to a behavior: working, shopping, internet use, porn, sex.- You are on antidepressants, anxiolytics or antipsychotic medication, and are thinking of reducing these.- You obsess over certain activities. These activities preoccupy your life, affecting your work, and family life-- like work, sports, collecting certain things, hoarding things.- You have problems eating: obsessive thoughts about eating or not eating, bingeing, throwing up after eating, thoughts of starving yourself, feeling anxious around food, not able to enjoy food or the eating process.- You have issues having sex.- You suffer pain and aches that your doctors cannot find physical cause of.- You are having problems working or studying, and feel like you're about to burnout.- You are socially isolated and / or feel very lonely.- You have lost a parent / family member or two for over a year and have not got over the loss.- You had had difficult childhood experience of abuse, neglect or abandonment.- You have been sexually abused in your life, and have not worked through this experience with anyone.- You have difficulty remembering parts of you childhood, and you suspect trauma.- You've encountered a traumatic event that was threatening to your life or the life of someone else.- You cannot feel or identify your emotions.- You see, hear of feel things that are not there.- You or a loved one suffer chronic physical ailments or disability.- You or a loved one have been diagnosed with terminal ailment.- Your children are suffering from poor grades, ADHD, stress or are suicidal. 
+
+This is not a comprehensive list, although it does cover issues that I deal with in the psychotherapy practice.
