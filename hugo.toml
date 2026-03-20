@@ -1,8 +1,10 @@
-baseURL = "https://nikhelbig.github.io/"
+baseURL = "https://chewhelbig.github.io/nikhelbig/"
 languageCode = "en"
 title = "The Psychotherapist — Dr. Nicole Chew-Helbig"
-theme = ""
-paginate = 12
+
+[pagination]
+  pagerSize = 12
+
 enableRobotsTXT = true
 enableEmoji = false
 
