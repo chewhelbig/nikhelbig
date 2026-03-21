@@ -3,8 +3,8 @@
     <div class="footer-links">
       <a href="{{ .Site.Params.practiceURL }}">Clinical Practice</a>
       <a href="{{ .Site.Params.fieldnotesURL }}">FieldNotes AI App</a>
-      <a href="/theses-and-publications/">Publications</a>
-      <a href="/about/">About</a>
+      <a href="{{ "theses-and-publications/" | absURL }}">Publications</a>
+      <a href="{{ "about/" | absURL }}">About</a>
     </div>
     <p class="footer-copy">&copy; {{ now.Year }} Dr. Nicole Chew-Helbig. All rights reserved.</p>
   </div>
