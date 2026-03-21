@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="section-header">
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="section-description">{{ . }}</div>{{ end }}
+</section>
+
+<section class="article-list">
+  {{ range .Pages.ByDate.Reverse }}
+  <article class="article-preview {{ if .Params.image }}has-image{{ end }}">
+    {{ with .Params.image }}
+    <a href="{{ $.Permalink }}" class="article-thumb">
+      <img src="{{ . }}" alt="" loading="lazy">
+    </a>
+    {{ end }}
+    <div class="article-text">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p class="article-meta">{{ .Date.Format "2 January 2006" }} · {{ .ReadingTime }} min read</p>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </div>
+  </article>
+  {{ end }}
+</section>
+{{ end }}
