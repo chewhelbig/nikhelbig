@@ -5,6 +5,7 @@ draft: false
 description: "This is a summary of Otto Kernberg's lecture on Transference Analysis.  Transference is an important term in psychodynamic therapies, and even dialogic therapies like Gestalt..."
 tags: ["borderline personality case study", "countertransference", "otto kernberg", "transference", "transference analysis"]
 original_url: "/otto-kernberg-transference-analysis-in-psychotherapy/"
+image: "wp-content/uploads/2019/07/teams_and_group_surrealistic_in_vivid_colors_5.jpg"
 ---
 
 This is a summary of Otto Kernberg's lecture on Transference Analysis.  Transference is an important term in psychodynamic therapies, and even dialogic therapies like Gestalt therapy.
