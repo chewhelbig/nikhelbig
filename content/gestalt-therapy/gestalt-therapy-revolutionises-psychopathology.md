@@ -15,6 +15,7 @@ references:
   - "Stanghellini, G., & Fuchs, T. (Eds.). (2013). *One Century of Karl Jaspers' General Psychopathology*. Oxford University Press."
   - "Mitchell, S. A. (1988). *Relational Concepts in Psychoanalysis*. Harvard University Press."
   - "Kleinman, A. (1988). *The Illness Narratives*. Basic Books."
+  - images: "wp-content/uploads/2019/12/a_woman_therapist_surreal_painting_2.jpg"
 ---
 
 For over a century, mental health professionals have grappled with a fundamental question: what is the nature of psychological suffering? While modern psychiatry has increasingly embraced a medical model centred on diagnostic categories and symptom reduction, a rich tradition of relational and phenomenological approaches offers a radically different perspective — one that views psychopathology not as individual pathology, but as the emergent suffering of human relationships themselves.
