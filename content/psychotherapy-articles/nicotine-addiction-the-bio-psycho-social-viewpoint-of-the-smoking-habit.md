@@ -5,6 +5,7 @@ draft: false
 description: "This article is a reflection on the lecture series on the topic of addiction. The focus here is that of nicotine addiction.  # Why Smoking?  Nicotine addiction seems less serious to law enforcers..."
 tags: ["nicotine addiction", "nicotine addiction and psychotherapy", "nicotine and heart disease", "smoking", "smoking habits among students"]
 original_url: "/nicotine-addiction-the-bio-psycho-social-viewpoint-of-the-smoking-habit/"
+image: "wp-content/uploads/2023/01/dreamwork_in_surreal_painting_4-1.jpg"
 ---
 
 This article is a reflection on the lecture series on the topic of addiction. The focus here is that of nicotine addiction.
