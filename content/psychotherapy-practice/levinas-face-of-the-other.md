@@ -1,5 +1,5 @@
 ---
-title: "Levina's \"Face of the Other\""
+title: "Levina's Face of the Other"
 date: 2024-12-29
 draft: false
 description: "Emmanuel Levinas' concept of the **\"face of the Other\"** is a central idea in his philosophy, emphasizing ethics as the foundation of human existence. Here’s an overview of the concept:  ### 1. **The..."
