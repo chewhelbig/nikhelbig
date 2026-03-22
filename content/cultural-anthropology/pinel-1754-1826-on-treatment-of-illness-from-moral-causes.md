@@ -5,6 +5,7 @@ draft: false
 description: "Out of the era of the post French Revolution, we learn about Philippe Pinel (1754–1826), one of the founding fathers of what would later become psychiatry and..."
 tags: ["Erfahrungsseelenkunde", "paradoxical theory of change", "pinel", "psychopathology"]
 original_url: "/pinel-1754-1826-on-treatment-of-illness-from-moral-causes/"
+images: "wp-content/uploads/2023/02/treatment_in_surrealistic_in_vivid_colors_6.jpg"
 ---
 
 Out of the era of the post French Revolution, we learn about Philippe Pinel (1754–1826), one of the founding fathers of what would later become psychiatry and psychopathology.
