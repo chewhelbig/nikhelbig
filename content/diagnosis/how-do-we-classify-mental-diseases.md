@@ -5,6 +5,7 @@ draft: false
 description: "There are 2 main classifications standards that are used today in the western world to diagnose psychopathological symptoms.  In the field psychotherapy, the concept of diagnostics is controversial...."
 tags: ["diagnostics for mental disorders", "dsm 5", "ICD-10", "international classification of diseases"]
 original_url: "/classification-of-diseases-icd10/"
+images: "wp-content/uploads/2023/02/teams_and_group_surrealistic_in_vivid_colors_7.jpg"
 ---
 
 There are 2 main classifications standards that are used today in the western world to diagnose psychopathological symptoms.
