@@ -5,7 +5,7 @@ draft: false
 description: "Depression is crippling, pervasive, prevalent and worth studying.  Depression is also a major cause of disability.  The focus of this article /lecture : What has biology, what has psychology got to..."
 tags: ["biological reasons for depression", "major depression", "sleep disorder", "stress hormones"]
 original_url: "/watch-stanfords-sapolsky-on-depression-in-u-s-full-lecture-on-youtube/"
-images: "wp-content/uploads/2022/12/dialogue_therapy_with_therapist_in_surrealistic_in_vivid_colours_0.jpg"
+image: "wp-content/uploads/2022/12/dialogue_therapy_with_therapist_in_surrealistic_in_vivid_colours_0.jpg"
 ---
 
 Depression is crippling, pervasive, prevalent and worth studying.  Depression is also a major cause of disability.
