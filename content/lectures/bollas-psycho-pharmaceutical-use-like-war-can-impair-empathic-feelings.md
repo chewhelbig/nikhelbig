@@ -5,6 +5,7 @@ draft: false
 description: "This is not an article against the use of psycho-pharmaceuticals. Antidepressants, antipsychotics etc. use save lives and alleviate suffering but have side effects. The individual is left to choose:..."
 tags: ["anti-depressants", "christopher bollas", "dangers of adhd", "empathy", "loss of empathy", "psycho-pharmaceuticals", "ptsd", "side effects of drugs"]
 original_url: "/bollas-psycho-pharmaceuticals-use-like-war-kill-empathy/"
+images: "wp-content/uploads/2019/07/teams_and_group_surrealistic_in_vivid_colors_0.jpg"
 ---
 
 This is not an article against the use of psycho-pharmaceuticals. Antidepressants, antipsychotics etc. use save lives and alleviate suffering but have side effects. The individual is left to choose: work through mental suffering by talking to someone, or use a medication but numb out the possibility to feel human empathy. Ultimately the use of these drugs leads us to dependency and destroys our ability to interact with others in a contact-ful way. The result is existential loneliness.
