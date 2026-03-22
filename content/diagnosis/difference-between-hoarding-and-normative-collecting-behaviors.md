@@ -5,6 +5,7 @@ draft: false
 description: "Collecting is a part of human nature. The reason for collecting and the type of objects collected is variable and unique to each person.     [caption id=\"attachment_2011\" align=\"alignnone\"..."
 tags: ["collecting", "differences", "hoarders", "hoarding"]
 original_url: "/difference-between-hoarding-and-normative-collecting-behaviors/"
+images: "wp-content/uploads/2023/01/time_and_space_as_surrealistic_in_vivid_colors_1.jpg"
 ---
 
 Collecting is a part of human nature. The reason for collecting and the type of objects collected is variable and unique to each person.
