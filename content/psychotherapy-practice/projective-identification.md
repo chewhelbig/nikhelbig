@@ -5,6 +5,7 @@ draft: false
 description: "Otto Kernberg explains what [Projective..."
 tags: ["projective identification"]
 original_url: "/projective-identification/"
+image: "wp-content/uploads/2019/11/couples_therapy_in_surrealistic_in_vivid_colors_6.jpg"
 ---
 
 Otto Kernberg explains what [Projective Identification](http://www.amazon.com/Projective-Identification-Concept-Library-Psychoanalysis/dp/0415605296/ref=as_li_bk_tl/?tag=fitnessdiy01-20&linkId=12855ce8080807d9bc448000d4c9c6aa&linkCode=ktl)![](https://ir-na.amazon-adsystem.com/e/ir) is:
