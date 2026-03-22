@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>Psychotherapy Resources &amp; Articles</h1>
+  <p class="hero-text">A curated collection of writings on psychotherapy theory and practice — Gestalt therapy, couples work, trauma, psychoanalysis, and the therapeutic relationship.</p>
+  <p class="hero-author">By <strong>Dr. Nicole Chew-Helbig</strong>, PhD — Gestalt Therapist, Couples Therapist, Author &amp; Researcher</p>
+</section>
+
+<section class="articles-grid">
+  {{ range first 12 .Site.RegularPages.ByDate.Reverse }}
+  <a href="{{ .Permalink }}" class="grid-card">
+    {{ with .Params.image }}
+    <div class="grid-card-img">
+      <img src="{{ . }}" alt="" loading="lazy">
+    </div>
+    {{ else }}
+    <div class="grid-card-img grid-card-noimg"></div>
+    {{ end }}
+    <div class="grid-card-body">
+      <h3>{{ .Title }}</h3>
+      <p class="grid-card-meta">{{ .Date.Format "2 January 2006" }} · {{ .ReadingTime }} min read</p>
+    </div>
+  </a>
+  {{ end }}
+</section>
+
+<section class="home-sections">
+  <h2>Browse by Topic</h2>
+  <div class="categories-grid">
+    {{ range .Site.Sections }}
+    {{ if gt (len .Pages) 0 }}
+    <a href="{{ .Permalink }}" class="category-card">
+      <h3>{{ .Title }}</h3>
+      <p class="category-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}article{{ else }}articles{{ end }}</p>
+    </a>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

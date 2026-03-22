@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="{{ .Site.Params.practiceURL }}">Clinical Practice</a>
+      <a href="{{ .Site.Params.fieldnotesURL }}">FieldNotes AI App</a>
+      <a href="/theses-and-publications/">Publications</a>
+      <a href="/about/">About</a>
+    </div>
+    <p class="footer-copy">&copy; {{ now.Year }} Dr. Nicole Chew-Helbig. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+  document.querySelector('.nav-list')?.classList.toggle('open');
+});
+</script>
