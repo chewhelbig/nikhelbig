@@ -5,7 +5,7 @@ draft: false
 description: "https://youtu.be/oUDuLmjTaZ4  ## Outline of Lecture  **I. Introduction**  - Dr. Glen Gabbard is the 2018 recipient of the American Psychoanalytic Association’s Master Teacher Award [1].  Quote: “I am..."
 tags: ["difficult patient", "psychoanalysis", "psychotherapy"]
 original_url: "/glen-gabbard-the-difficult-patient/"
-images: "wp-content/uploads/2023/01/gabor_mate_with_singer_sia_silhouette_as_surrealistic_in_vivid_colors_3.jpg"
+image: "wp-content/uploads/2023/01/gabor_mate_with_singer_sia_silhouette_as_surrealistic_in_vivid_colors_3.jpg"
 ---
 
 https://youtu.be/oUDuLmjTaZ4
