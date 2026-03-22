@@ -5,6 +5,7 @@ draft: false
 description: "[![](//ws-na.amazon-adsystem.com/widgets/q)](https://www.amazon.com/gp/product/0143127748/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0143127748&linkCode=as2&tag=oliverhelbign-20&linkId=..."
 tags: ["Bessel van der Kolk", "Borderline Personality Disorder", "childhood trauma", "complex trauma", "interview questions"]
 original_url: "/how-to-ask-a-patient-about-childhood-trauma-history-advice-from-dr-bessel-van-der-kolk/"
+images: "wp-content/uploads/2022/12/psychoanalysis_surreal_painting_2.jpg"
 ---
 
 [![](//ws-na.amazon-adsystem.com/widgets/q)](https://www.amazon.com/gp/product/0143127748/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0143127748&linkCode=as2&tag=oliverhelbign-20&linkId=c1774b229b9eb3f88492f76d1c55f1db)![](//ir-na.amazon-adsystem.com/e/ir)In this lecture Bessel van der Kolk speaks about his work with patients with childhood trauma. Here is a snippet of this video on how to get from a patient information about his/her trauma history. The topic of childhood trauma is not easy to bring up. Oftentimes the patient doesn't recall the traumatic event(s). Sometimes these events are not acknowledged as trauma by the patient. Even if someone has encountered trauma and has memory  the event, there may still exist emotional difficulty in relating the event to a professional.
