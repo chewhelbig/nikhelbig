@@ -5,6 +5,7 @@ draft: false
 description: "This information is lifted off the [Diagnostic and Statistical Manual of Mental..."
 tags: ["depression", "difference between grief and depression", "dsm 5", "grief"]
 original_url: "/differentiation-between-the-healthy-process-of-grief-and-depression/"
+images: "wp-content/uploads/2022/12/therapeutic_autoethnography_journal_as_surrealistic_in_vivid_colors_6.jpg"
 ---
 
 This information is lifted off the [Diagnostic and Statistical Manual of Mental Disorders](http://www.amazon.com/Diagnostic-Statistical-Manual-Mental-Disorders/dp/9386217961/ref=as_li_bk_tl/?tag=fitnessdiy01-20&linkId=3de747c57f53af439010c0bf217196b6&linkCode=ktl)![](https://ir-na.amazon-adsystem.com/e/ir) ( DSM 5).  Interestingly, this passage, which I consider to hold very important information, is written as a *footnote* on page 134 of the Manual.
