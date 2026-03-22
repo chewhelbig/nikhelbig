@@ -5,6 +5,7 @@ draft: false
 description: "A group is not an aggregate of individuals. It's a body that has a mental state and creates a phantasy.  *  The group produces its own mythology. When the group work is focused on primary..."
 tags: ["bion", "Bion basic assumption", "group", "group therapy", "myth", "mythology"]
 original_url: "/bion-group/"
+image: "wp-content/uploads/2019/07/teams_and_group_surrealistic_in_vivid_colors_2.jpg"
 ---
 
 A group is not an aggregate of individuals. It's a body that has a mental state and creates a phantasy.
