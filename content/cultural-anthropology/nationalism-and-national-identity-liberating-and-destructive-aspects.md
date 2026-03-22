@@ -5,6 +5,7 @@ draft: false
 description: "Kelman explains to us the liberating and destructive aspects of Nationalism and National Identity. As a Holocaust survivor, he experienced the persecution of of nationalism of the National Socialists..."
 tags: ["national identity", "national ideology", "nationalism"]
 original_url: "/nationalism-and-national-identity-liberating-and-destructive-aspects/"
+images: "wp-content/uploads/2023/02/treatment_in_surrealistic_in_vivid_colors_6.jpg"
 ---
 
 Kelman explains to us the liberating and destructive aspects of Nationalism and National Identity. As a Holocaust survivor, he experienced the persecution of of nationalism of the National Socialists in Germany in WWII, and at the same time it is the Israeli nationalism that helped the Jews regain their self dignity and identity as a people.
