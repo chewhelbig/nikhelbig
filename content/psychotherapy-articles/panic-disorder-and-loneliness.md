@@ -5,6 +5,7 @@ draft: false
 description: "Panic disorders are sensed as physical symptoms. Often the root cause of these symptoms are not initially known to the person experiencing these attacks . This \"not knowing\" makes the physical..."
 tags: ["childhood experiences", "loneliness", "panic disorder"]
 original_url: "/panic-disorder-and-loneliness/"
+image: "wp-content/uploads/2019/07/dreams_in_the_style_of_surrealism_4.jpg"
 ---
 
 Panic disorders are sensed as physical symptoms. Often the root cause of these symptoms are not initially known to the person experiencing these attacks . This "not knowing" makes the physical reactions seem unpredictable, spontaneous and frightening. The sufferer is left feeling vulnerable to his/her condition when a panic attack seemingly arises out of nowhere.
