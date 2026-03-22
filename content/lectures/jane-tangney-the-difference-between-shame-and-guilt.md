@@ -5,7 +5,7 @@ draft: false
 description: "[![](//ws-na.amazon-adsystem.com/widgets/q)](https://www.amazon.com/gp/product/0898622646/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0898622646&linkCode=as2&tag=oliverhelbign-20&linkId=..."
 tags: ["emotions", "june tangney", "shame and guilt"]
 original_url: "/jane-tangney-the-difference-between-shame-and-guilt/"
-images: "wp-content/uploads/2023/01/mourning_and_healing_surrealistic_in_vivid_colors_3.jpg"
+image: "wp-content/uploads/2023/01/mourning_and_healing_surrealistic_in_vivid_colors_3.jpg"
 ---
 
 [![](//ws-na.amazon-adsystem.com/widgets/q)](https://www.amazon.com/gp/product/0898622646/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0898622646&linkCode=as2&tag=oliverhelbign-20&linkId=145b9a89bf8f9104148c03878b264cee)![](//ir-na.amazon-adsystem.com/e/ir)Shame and guilt are uniquely human emotions. These are emotions that does not exist in infants up to a certain age. In other words, shame and guilt are emotions learnt, and this learning coincides with the infant's discovery of the self, when the infant becomes self conscious.
