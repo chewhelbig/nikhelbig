@@ -5,6 +5,7 @@ draft: false
 description: "Definition of hoarding disorder:  the extensive collection of objects followed by difficulty discarding them for aesthetic reasons, or because of an object’s emotional value or consideration of its..."
 tags: ["hoarding disorder"]
 original_url: "/hoarding-disorder/"
+image: "wp-content/uploads/2019/07/teams_and_group_surrealistic_in_vivid_colors_3.jpg"
 ---
 
 Definition of hoarding disorder:  the extensive collection of objects followed by difficulty discarding them for aesthetic reasons, or because of an object’s emotional value or consideration of its possible usefulness in the future.
