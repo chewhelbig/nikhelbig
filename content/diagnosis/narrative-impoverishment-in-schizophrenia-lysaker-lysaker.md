@@ -5,6 +5,7 @@ draft: false
 description: "\"Schizophrenia is characterized by the profoundly diminished ability to experience and represent one's life as an evolving story\" (Lysaker & Lysaker 2006). Disorganized communication about facts,..."
 tags: ["dialogic", "projective identification", "schizophrenia", "therapeutic alliance"]
 original_url: "/narrative-impoverishment-in-schizophrenia-lysaker-lysaker/"
+images: "wp-content/uploads/2019/07/teams_and_group_surrealistic_in_vivid_colors_2.jpg"
 ---
 
 "Schizophrenia is characterized by the profoundly diminished ability to experience and represent one's life as an evolving story" (Lysaker & Lysaker 2006). Disorganized communication about facts, affects and thoughts is involved in disability and *a cause of anguish*, and a sense of self that lacks depth. There is a lostness of the self amidst an evolving life, and a sense of being an object of social control. The narratives are impoverished.
