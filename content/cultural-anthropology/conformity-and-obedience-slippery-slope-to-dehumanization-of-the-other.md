@@ -5,6 +5,7 @@ draft: false
 description: "The social consequences of conformity and obedience of a group to it's authority figures. Conformity and obedience to a group (be it a nation, an ethnic or religious group, a company or a family..."
 tags: ["compliance", "conformity", "dehumanization", "group", "identification", "nation", "obedience"]
 original_url: "/conformity-and-obedience-slippery-slope-to-dehumanization-of-the-other/"
+images: "wp-content/uploads/2023/02/treatment_in_surrealistic_in_vivid_colors_7.jpg"
 ---
 
 The social consequences of conformity and obedience of a group to it's authority figures. Conformity and obedience to a group (be it a nation, an ethnic or religious group, a company or a family etc.) are acts of loyalty, which, when acted out of consciousness is a slippery slope to the dehumanization of other people who are not part of the group, e.g ethnic minorities, foreign workers, etc.
