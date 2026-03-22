@@ -5,6 +5,7 @@ draft: false
 description: "[Karl Philipp Moritz](http://www.amazon.com/Karl-Philipp-Moritz-Fringe-Genius/dp/0802054145/ref=as_li_bk_tl/?tag=fitnessdiy01-20&linkId=cf01a14a038e2faa57e752c91f76eb5b&linkCode=ktl)*'s (1756-1793)..."
 tags: ["18 century", "Erfahrungsseelenkunde", "holism", "individual and society", "Karl Philipp Moritz", "psychological case studies", "psychotherapy case studies"]
 original_url: "/das-magazin-zur-erfahrungsseelenkunde-psychotherapy-case-studies-of-the-18th-century/"
+images: "wp-content/uploads/2023/02/teams_and_group_surrealistic_in_vivid_colors_7.jpg"
 ---
 
 [Karl Philipp Moritz](http://www.amazon.com/Karl-Philipp-Moritz-Fringe-Genius/dp/0802054145/ref=as_li_bk_tl/?tag=fitnessdiy01-20&linkId=cf01a14a038e2faa57e752c91f76eb5b&linkCode=ktl)*'s (1756-1793) das [Magazin zur Erfahrungsseelenkunde](http://www.amazon.com/Magazin-Erfahrungsseelenkunde-Lesebuch-Gelehrte-Ungelehrte/dp/0331093480/ref=as_li_bk_tl/?tag=fitnessdiy01-20&linkId=5f7147e3c9a85df08e59e4c7d355b45f&linkCode=ktl)![](https://ir-na.amazon-adsystem.com/e/ir) *(translated as the Magazine for Empirical Psychology)  could be the first published books (or journal) of modern psychotherapy case studies. The magazine is unfortunately, still not translated into English.
