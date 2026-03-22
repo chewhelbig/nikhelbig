@@ -5,6 +5,7 @@ draft: false
 description: "Religion is in the modern \"westernized\" world today a topic of contention, that sparked off ever since the era of the Radical Enlightenment that began in the 18th Century in Europe. The situation is..."
 tags: ["idolatory", "magical thinking", "narcissism", "psychotherapy and religion", "psyhcoanalysis", "religion", "religion and narcissism", "religious values"]
 original_url: "/the-function-of-religion-in-mental-health-today/"
+images: "wp-content/uploads/2017/05/dreams_in_the_style_of_surrealism_2.jpg"
 ---
 
 Religion is in the modern "westernized" world today a topic of contention, that sparked off ever since the era of the Radical Enlightenment that began in the 18th Century in Europe. The situation is somewhat reversed in Asia because the religion of Asia was not Christianity till after this era. Since the theme of this website is not focussed on Religion or History, we cannot completely separate these aspects of cultural anthropology from modern life.
