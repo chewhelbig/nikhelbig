@@ -5,6 +5,7 @@ draft: false
 description: "The diagnosis of adjustment disorders covers a wide range of maladaptive responses to psychological stress, which could be acute, chronic or repeated. These may be responses to illness, changes to..."
 tags: ["adjustment disorder"]
 original_url: "/adjustment-disorders-causes-and-symptoms/"
+images: "wp-content/uploads/2022/12/therapeutic_autoethnography_journal_as_surrealistic_in_vivid_colors_7.jpg"
 ---
 
 The diagnosis of adjustment disorders covers a wide range of maladaptive responses to psychological stress, which could be acute, chronic or repeated. These may be responses to illness, changes to family life, developmental milestones such as puberty, marriage, relocation, changes in employment etc.
