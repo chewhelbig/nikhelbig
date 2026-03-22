@@ -5,6 +5,7 @@ draft: false
 description: "The art with the theme of the \"mother\" or good and evil mothers by 19th Century painter, [Giovanni..."
 tags: ["good and bad mother", "melanie klein", "oedipus complex", "psychoanalysis", "sagentini art"]
 original_url: "/psychoanalysis-and-segantini-art/"
+images: "wp-content/uploads/2023/01/dreamwork_in_surreal_painting_4-1.jpg"
 ---
 
 The art with the theme of the "mother" or good and evil mothers by 19th Century painter, [Giovanni Segantini](https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjr5fm-uabUAhXhDsAKHQxgAT4QFggjMAA&url=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FGiovanni_Segantini&usg=AFQjCNERgiWeMrZHjidF9O8TAQsprNz-lw&sig2=NyvEOLkgcBnTZhj5rT5gXw), enlivens us to the concept of the good and bad internalized mother in psychoanalysis.
