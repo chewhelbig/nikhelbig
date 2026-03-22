@@ -4,7 +4,7 @@ date: 2024-12-29
 draft: false
 description: "Emmanuel Levinas' concept of the **\"face of the Other\"** is a central idea in his philosophy, emphasizing ethics as the foundation of human existence. Here’s an overview of the concept:  ### 1. **The..."
 tags: ["levina", "phenomenology"]
-original_url: "/levinas-face-of-the-other/"
+original_url: "wp-content/uploads/2023/01/self_object_surrealistic_in_vivid_colors_3.jpg"
 ---
 
 Emmanuel Levinas' concept of the **"face of the Other"** is a central idea in his philosophy, emphasizing ethics as the foundation of human existence. Here’s an overview of the concept:
