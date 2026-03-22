@@ -5,7 +5,7 @@ draft: false
 description: "I am deriving the inspiration to write this article from Claudio Naranjo's *The Divine Child and the Hero: Inner Meaning in Children's Literature, *and a presentation I have to give to the class on..."
 tags: ["Gestalt Therapy", "inner child", "naranjo", "the little prince", "top-dog under-dog"]
 original_url: "/your-inner-child-in-childrens-stories/"
-image:"wp-content/uploads/2019/07/dreams_in_the_style_of_surrealism_6.jpg"
+image: "wp-content/uploads/2019/07/dreams_in_the_style_of_surrealism_6.jpg"
 ---
 
 I am deriving the inspiration to write this article from Claudio Naranjo's *The Divine Child and the Hero: Inner Meaning in Children's Literature, *and a presentation I have to give to the class on the topic :Work with the inner child in Gestalt therapy.
