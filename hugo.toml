@@ -54,6 +54,10 @@ enableEmoji = false
     name = "About"
     url = "/about/"
     weight = 7
+  [[menus.main]]
+  name = "Gestalt Therapy"
+  url = "/gestalt-therapy-resource-page/"
+  weight = 20
 
 [outputs]
   home = ["HTML", "RSS"]
