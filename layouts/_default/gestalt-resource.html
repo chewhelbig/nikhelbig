@@ -1,0 +1,48 @@
+{{ define "main" }}
+<article class="gestalt-resource-page">
+  
+  {{ if .Params.image }}
+  <div class="resource-hero">
+    <img src="{{ .Params.image | absURL }}" alt="Gestalt Therapy Resource" loading="lazy">
+  </div>
+  {{ end }}
+
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+
+  <!-- Dynamic Gestalt Therapy Article Grid -->
+  <section class="gestalt-articles-section">
+    <h2>Gestalt Therapy Blog Articles</h2>
+    <div class="gestalt-grid">
+      {{ range where .Site.RegularPages "Section" "gestalt-therapy" }}
+      <a href="{{ .RelPermalink }}" class="gestalt-grid-item">
+        {{ if .Params.image }}
+        <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" loading="lazy">
+        {{ else }}
+        <div class="gestalt-grid-placeholder"></div>
+        {{ end }}
+        <span class="gestalt-grid-title">{{ .Title }}</span>
+      </a>
+      {{ end }}
+
+      <!-- Also pull from gestalt-therapy-books -->
+      {{ range where .Site.RegularPages "Section" "gestalt-therapy-books" }}
+      <a href="{{ .RelPermalink }}" class="gestalt-grid-item">
+        {{ if .Params.image }}
+        <img src="{{ .Params.image | absURL }}" alt="{{ .Title }}" loading="lazy">
+        {{ else }}
+        <div class="gestalt-grid-placeholder"></div>
+        {{ end }}
+        <span class="gestalt-grid-title">{{ .Title }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+
+</article>
+{{ end }}
