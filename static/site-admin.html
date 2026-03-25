@@ -132,24 +132,45 @@ async function doConnect(){
 
 async function loadArticles(){
   articles=[];
-  for(const sec of SECTIONS){
-    try{
-      const r=await fetch(`https://api.github.com/repos/${REPO}/contents/content/${sec.s}?ref=main`,{mode:'cors'});
-      if(!r.ok)continue;
-      const files=await r.json();
-      for(const f of files){
-        if(f.name==='_index.md'||!f.name.endsWith('.md'))continue;
-        articles.push({path:f.path,section:sec.s,filename:f.name,sha:f.sha,meta:{title:f.name.replace('.md','').replace(/-/g,' '),date:''},loaded:false});
-      }
-    }catch(e){}
+  // Use Git Trees API - gets ALL files in ONE request
+  try{
+    const r=await fetch(`https://api.github.com/repos/${REPO}/git/trees/main?recursive=1`,{mode:'cors'});
+    if(!r.ok)throw new Error('Trees API failed: '+r.status);
+    const tree=await r.json();
+    const mdFiles=tree.tree.filter(f=>f.path.startsWith('content/')&&f.path.endsWith('.md')&&!f.path.endsWith('_index.md'));
+    
+    const secSlugs=new Set(SECTIONS.map(s=>s.s));
+    for(const f of mdFiles){
+      const parts=f.path.split('/');
+      if(parts.length!==3)continue;
+      const section=parts[1];
+      if(!secSlugs.has(section))continue;
+      const filename=parts[2];
+      const title=filename.replace('.md','').replace(/-/g,' ');
+      articles.push({path:f.path,section,filename,sha:f.sha,meta:{title,date:''},loaded:false});
+    }
+  }catch(e){
+    log('Trees API error: '+e.message+', trying contents API...');
+    for(const sec of SECTIONS){
+      try{
+        const r2=await fetch(`https://api.github.com/repos/${REPO}/contents/content/${sec.s}?ref=main`,{mode:'cors'});
+        if(!r2.ok)continue;
+        const files=await r2.json();
+        for(const f of files){
+          if(f.name==='_index.md'||!f.name.endsWith('.md'))continue;
+          articles.push({path:f.path,section:sec.s,filename:f.name,sha:f.sha,meta:{title:f.name.replace('.md','').replace(/-/g,' '),date:''},loaded:false});
+        }
+      }catch(e2){}
+    }
   }
-  // Load front matter in batches
-  for(let i=0;i<articles.length;i+=8){
-    await Promise.allSettled(articles.slice(i,i+8).map(async a=>{
+  // Load front matter in small batches with error handling
+  for(let i=0;i<articles.length;i+=6){
+    await Promise.allSettled(articles.slice(i,i+6).map(async a=>{
       try{
         const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${a.path}?ref=main`,{mode:'cors'});
         if(!r.ok)return;
         const d=await r.json();
+        if(!d.content)return;
         const content=atob(d.content.replace(/\n/g,''));
         const{meta}=parseFM(content);
         a.meta=meta;a.sha=d.sha;a.loaded=true;
@@ -200,13 +221,15 @@ async function openEditor(path){
   document.getElementById('listArea').innerHTML='<div class="loading">Loading…</div>';
   try{
     const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${path}?ref=main`,{mode:'cors'});
+    if(!r.ok)throw new Error('GitHub returned '+r.status+' — you may be rate limited. Wait a minute and try again, or edit directly on <a href="https://github.com/'+REPO+'/edit/main/'+path+'" target="_blank">GitHub</a>');
     const d=await r.json();
+    if(!d.content)throw new Error('File content empty — rate limited. <a href="https://github.com/'+REPO+'/edit/main/'+path+'" target="_blank">Edit on GitHub instead</a>');
     const content=atob(d.content.replace(/\n/g,''));
     const{meta,body}=parseFM(content);
     const section=path.split('/')[1];
     showEditor(meta,body,path,d.sha,section,false);
   }catch(e){
-    document.getElementById('listArea').innerHTML=`<div class="loading" style="color:var(--red)">Error: ${e.message}</div>`;
+    document.getElementById('listArea').innerHTML=`<div class="loading" style="color:var(--red)">${e.message}</div>`;
   }
 }
 
