@@ -4,7 +4,7 @@ date: 2024-05-01
 draft: false
 description: "How the neuropsychologist Kurt Goldstein's holistic organism theory shaped Fritz Perls' development of Gestalt therapy."
 tags: ["Kurt Goldstein", "Fritz Perls", "Gestalt Therapy", "organism", "self-actualisation"]
-image: "wp-content/uploads/2022/12/freud_office_1.jpg"
+image: "wp-content/uploads/2023/02/figure_and_background_in_surrealistic_in_vivid_colors_2.jpg"
 original_url: "https://nikhelbig.at/kurt-goldsteins-influence-on-fritz-perls-gestalt-therapy/"
 ---
 
