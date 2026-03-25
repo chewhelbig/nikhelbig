@@ -12,27 +12,19 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:
 .app{max-width:960px;margin:0 auto;padding:1.5rem}
 h1{font-size:1.4rem;margin-bottom:.2rem}
 .sub{font-size:.8rem;color:var(--dim);margin-bottom:1.5rem}
-/* Auth */
-.auth{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;max-width:500px;margin:2rem auto}
-.auth h2{font-size:1.1rem;margin-bottom:.5rem}
-.auth p{font-size:.8rem;color:var(--dim);margin-bottom:1rem}
-.auth a{color:var(--accent)}
-/* Forms */
 .fg{margin-bottom:.8rem}
 .fl{display:block;font-size:.72rem;font-weight:600;color:var(--dim);margin-bottom:.2rem}
 .fi{width:100%;padding:.5rem .6rem;border:1px solid var(--border);border-radius:var(--radius);font-family:var(--mono);font-size:.8rem;background:var(--bg);color:var(--text);outline:none}
 .fi:focus{border-color:var(--accent)}
 select.fi{font-family:var(--font)}
-.btn{padding:.5rem 1rem;border:none;border-radius:var(--radius);font-family:var(--font);font-size:.8rem;cursor:pointer}
+.btn{padding:.5rem 1rem;border:none;border-radius:var(--radius);font-family:var(--font);font-size:.8rem;cursor:pointer;display:inline-flex;align-items:center;gap:.3rem}
 .btn-p{background:var(--accent);color:#fff}.btn-p:hover{opacity:.9}
 .btn-s{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
 .btn-d{background:var(--red);color:#fff}.btn-d:hover{opacity:.9}
-/* Nav */
+.btn-g{background:var(--green);color:#fff}.btn-g:hover{opacity:.9}
 .nav{display:flex;gap:.4rem;margin-bottom:1.2rem;flex-wrap:wrap;align-items:center}
-.nav button{background:var(--surface);border:1px solid var(--border);color:var(--dim);padding:.4rem .8rem;border-radius:var(--radius);font-size:.75rem;cursor:pointer;font-family:var(--font)}
+.nav button,.nav select{background:var(--surface);border:1px solid var(--border);color:var(--dim);padding:.4rem .8rem;border-radius:var(--radius);font-size:.75rem;cursor:pointer;font-family:var(--font)}
 .nav button.active{border-color:var(--accent);color:var(--accent);background:rgba(107,76,42,.05)}
-.nav select{padding:.4rem;border:1px solid var(--border);border-radius:var(--radius);font-size:.75rem;font-family:var(--font);background:var(--surface)}
-/* List */
 .row{display:grid;grid-template-columns:50px 1fr auto;gap:.6rem;align-items:center;padding:.55rem .7rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.35rem;cursor:pointer;transition:border-color .1s}
 .row:hover{border-color:var(--accent)}
 .row img{width:50px;height:35px;object-fit:cover;border-radius:3px;background:var(--surface2)}
@@ -42,41 +34,37 @@ select.fi{font-family:var(--font)}
 .row-a{display:flex;gap:.25rem}
 .row-a button{background:none;border:1px solid var(--border);border-radius:3px;padding:.2rem .4rem;font-size:.63rem;cursor:pointer;color:var(--dim);font-family:var(--font)}
 .row-a button:hover{border-color:var(--accent);color:var(--accent)}
-.row-a button.del:hover{border-color:var(--red);color:var(--red)}
-/* Editor */
 .ed-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.8rem}
 .ed-full{grid-column:1/-1}
 textarea.ed-body{width:100%;min-height:400px;padding:.8rem;border:1px solid var(--border);border-radius:var(--radius);font-family:var(--mono);font-size:.78rem;line-height:1.6;background:var(--surface);color:var(--text);resize:vertical;outline:none;tab-size:2}
 textarea.ed-body:focus{border-color:var(--accent)}
-.ed-actions{display:flex;gap:.4rem;margin-top:.8rem;padding-top:.8rem;border-top:1px solid var(--border);align-items:center}
+.ed-actions{display:flex;gap:.4rem;margin-top:.8rem;padding-top:.8rem;border-top:1px solid var(--border);align-items:center;flex-wrap:wrap}
 .ed-path{font-size:.65rem;color:var(--dim);margin-left:auto}
-/* Toast */
 .toast{position:fixed;bottom:1.2rem;right:1.2rem;background:var(--text);color:#fff;padding:.5rem 1rem;border-radius:var(--radius);font-size:.78rem;opacity:0;transform:translateY(8px);transition:all .25s;z-index:99}
 .toast.show{opacity:1;transform:translateY(0)}
 .loading{text-align:center;padding:2.5rem;color:var(--dim);font-size:.82rem}
-.error{color:var(--red);font-size:.8rem;padding:1rem}
-/* Status bar */
+.manual-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1rem}
+.manual-box h3{font-size:.95rem;margin-bottom:.5rem}
+.manual-box ol{font-size:.82rem;line-height:1.9;margin-left:1.2rem;margin-bottom:1rem}
+.manual-box ol a{color:var(--accent);font-weight:600}
+.manual-code{width:100%;min-height:200px;padding:.8rem;border:1px solid var(--border);border-radius:var(--radius);font-family:var(--mono);font-size:.72rem;line-height:1.5;background:#fefcf9;color:var(--text);resize:vertical}
 .status{font-size:.7rem;color:var(--dim);padding:.5rem 0;border-top:1px solid var(--border);margin-top:1rem}
-@media(max-width:600px){.ed-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+@media(max-width:600px){.ed-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr auto}}
 </style>
 </head>
 <body>
 <div class="app">
 <h1>Site Admin</h1>
-<p class="sub">Manage articles on nikhelbig.at</p>
+<p class="sub">Manage articles on nikhelbig.at — Browse, edit, create articles. Changes are saved via GitHub.</p>
 <div id="root">
-  <div class="auth" id="authPanel">
-    <h2>Connect to GitHub</h2>
-    <p>You need a <a href="https://github.com/settings/tokens/new?scopes=repo&description=Site+Admin" target="_blank">Personal Access Token (Classic)</a> with <b>repo</b> scope to edit. Reading works without a token.</p>
-    <div class="fg">
-      <label class="fl">GitHub Token (starts with ghp_)</label>
-      <input type="password" class="fi" id="tokenInput" placeholder="ghp_xxxxxxxxxxxx">
-    </div>
+  <div style="max-width:500px;margin:2rem auto;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem">
+    <h2 style="font-size:1.1rem;margin-bottom:.5rem">Load Articles</h2>
+    <p style="font-size:.8rem;color:var(--dim);margin-bottom:1rem">Your repo is public, so no token is needed to browse. Click below to load all articles.</p>
     <div class="fg">
       <label class="fl">Repository</label>
       <input type="text" class="fi" id="repoInput" value="chewhelbig/nikhelbig">
     </div>
-    <button class="btn btn-p" onclick="doConnect()">Connect</button>
+    <button class="btn btn-p" onclick="doConnect()">Load Articles</button>
     <div id="authLog" style="margin-top:.8rem;font-family:var(--mono);font-size:.7rem;color:var(--dim);white-space:pre-wrap"></div>
   </div>
 </div>
@@ -95,47 +83,17 @@ const SECTIONS=[
 {s:'therapy-books',n:'Therapy Books'},{s:'general-psychology',n:'General Psychology'}
 ];
 
-let TOKEN='',REPO='chewhelbig/nikhelbig',articles=[],curSection=null;
+let REPO='chewhelbig/nikhelbig',articles=[],curSection=null;
 
 function log(msg){document.getElementById('authLog').textContent+=msg+'\n'}
+function toast(msg,dur=2500){const e=document.getElementById('toast');e.textContent=msg;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),dur)}
 
-// GitHub API with explicit CORS mode
-async function gh(endpoint,opts={}){
-  const url=`https://api.github.com/repos/${REPO}/${endpoint}`;
-  const headers={'Accept':'application/vnd.github.v3+json'};
-  if(TOKEN)headers['Authorization']=`token ${TOKEN}`;
-  try{
-    const r=await fetch(url,{mode:'cors',headers,...opts});
-    if(!r.ok){const t=await r.text();throw new Error(`${r.status}: ${t.substring(0,200)}`);}
-    return r.json();
-  }catch(e){
-    if(e.message.includes('Failed to fetch'))throw new Error('Network error — check browser console (F12) for details');
-    throw e;
-  }
-}
-
-async function ghPut(path,content,message,sha=null){
-  const body={message,content:btoa(unescape(encodeURIComponent(content))),branch:'main'};
-  if(sha)body.sha=sha;
-  return gh(`contents/${path}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
-}
-
-async function ghDel(path,sha,message){
-  return gh(`contents/${path}`,{method:'DELETE',headers:{'Content-Type':'application/json'},body:JSON.stringify({message,sha,branch:'main'})});
-}
-
-// Front matter
 function parseFM(text){
   const m=text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   if(!m)return{meta:{},body:text};
   const meta={};
-  let inTags=false,tagStr='';
   m[1].split('\n').forEach(line=>{
-    if(line.match(/^tags:\s*\[/)){
-      const tm=line.match(/^tags:\s*\[(.*)\]\s*$/);
-      if(tm)meta.tags=tm[1].replace(/"/g,'').trim();
-      return;
-    }
+    if(line.match(/^tags:\s*\[/)){const tm=line.match(/^tags:\s*\[(.*)\]\s*$/);if(tm)meta.tags=tm[1].replace(/"/g,'').trim();return}
     const kv=line.match(/^(\w[\w_]*):\s*"?(.*?)"?\s*$/);
     if(kv)meta[kv[1]]=kv[2].replace(/^"|"$/g,'');
   });
@@ -149,66 +107,26 @@ function buildFM(meta,body){
   s+=`draft: false\n`;
   if(meta.description)s+=`description: "${meta.description.replace(/"/g,'\\"')}"\n`;
   if(meta.image)s+=`image: "${meta.image}"\n`;
-  if(meta.tags){
-    const t=meta.tags.split(',').map(x=>`"${x.trim()}"`).join(', ');
-    s+=`tags: [${t}]\n`;
-  }
+  if(meta.tags){const t=meta.tags.split(',').map(x=>`"${x.trim()}"`).join(', ');s+=`tags: [${t}]\n`}
   if(meta.original_url)s+=`original_url: "${meta.original_url}"\n`;
   s+='---\n\n';
   return s+body;
 }
 
-function toast(msg,dur=2500){const e=document.getElementById('toast');e.textContent=msg;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),dur)}
-
-// === CONNECT ===
+// === CONNECT (read-only, no auth needed) ===
 async function doConnect(){
-  TOKEN=document.getElementById('tokenInput').value.trim();
   REPO=document.getElementById('repoInput').value.trim();
   const authLog=document.getElementById('authLog');
   authLog.textContent='';
 
-  // Step 1: test unauthenticated read (public repo)
-  log('Step 1: Testing public API access...');
-  try{
-    const r=await fetch(`https://api.github.com/repos/${REPO}`,{mode:'cors'});
-    if(!r.ok)throw new Error('Status '+r.status);
-    const d=await r.json();
-    log('✓ Repo found: '+d.full_name);
-  }catch(e){
-    log('✗ Cannot reach GitHub API: '+e.message);
-    log('\nThis usually means your browser or network is blocking the request.');
-    log('Try: 1) Different browser  2) Disable VPN/proxy  3) Disable browser extensions');
-    return;
-  }
-
-  // Step 2: test token if provided
-  if(TOKEN){
-    log('Step 2: Testing authentication...');
-    try{
-      const r=await fetch('https://api.github.com/user',{mode:'cors',headers:{'Authorization':'token '+TOKEN}});
-      if(!r.ok)throw new Error('Status '+r.status);
-      const d=await r.json();
-      log('✓ Authenticated as: '+d.login);
-    }catch(e){
-      log('⚠ Token test failed: '+e.message);
-      log('  You can still browse articles (read-only). Editing will not work.');
-    }
-  }else{
-    log('Step 2: No token — read-only mode');
-  }
-
-  // Step 3: load articles
-  log('Step 3: Loading articles...');
-  sessionStorage.setItem('gh_token',TOKEN);
-  sessionStorage.setItem('gh_repo',REPO);
-
+  log('Loading articles from '+REPO+'...');
   try{
     await loadArticles();
-    log(`✓ Loaded ${articles.length} articles`);
+    log('✓ Loaded '+articles.length+' articles');
     renderApp();
-    toast('Connected — '+articles.length+' articles loaded');
+    toast('Loaded '+articles.length+' articles');
   }catch(e){
-    log('✗ Error loading articles: '+e.message);
+    log('✗ Error: '+e.message);
   }
 }
 
@@ -216,18 +134,20 @@ async function loadArticles(){
   articles=[];
   for(const sec of SECTIONS){
     try{
-      const files=await gh(`contents/content/${sec.s}?ref=main`);
+      const r=await fetch(`https://api.github.com/repos/${REPO}/contents/content/${sec.s}?ref=main`,{mode:'cors'});
+      if(!r.ok)continue;
+      const files=await r.json();
       for(const f of files){
         if(f.name==='_index.md'||!f.name.endsWith('.md'))continue;
         articles.push({path:f.path,section:sec.s,filename:f.name,sha:f.sha,meta:{title:f.name.replace('.md','').replace(/-/g,' '),date:''},loaded:false});
       }
-    }catch(e){/* section might not exist */}
+    }catch(e){}
   }
   // Load front matter in batches
   for(let i=0;i<articles.length;i+=8){
     await Promise.allSettled(articles.slice(i,i+8).map(async a=>{
       try{
-        const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${a.path}?ref=main`,{mode:'cors',headers:TOKEN?{'Authorization':'token '+TOKEN}:{}});
+        const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${a.path}?ref=main`,{mode:'cors'});
         if(!r.ok)return;
         const d=await r.json();
         const content=atob(d.content.replace(/\n/g,''));
@@ -241,20 +161,17 @@ async function loadArticles(){
 // === RENDER ===
 function renderApp(){
   let secOpts=SECTIONS.map(s=>`<option value="${s.s}">${s.n} (${articles.filter(a=>a.section===s.s).length})</option>`).join('');
-  
   document.getElementById('root').innerHTML=`
     <div class="nav">
       <button class="${!curSection?'active':''}" onclick="curSection=null;renderList()">All (${articles.length})</button>
       <select onchange="curSection=this.value||null;renderList()" id="secSelect">
-        <option value="">Filter by section…</option>
-        ${secOpts}
+        <option value="">Filter by section…</option>${secOpts}
       </select>
       <div style="flex:1"></div>
       <button class="btn btn-p" onclick="newArticle()" style="font-size:.75rem">+ New Article</button>
     </div>
     <div id="listArea"></div>
-    <div class="status">Connected to ${REPO} · ${TOKEN?'Read/Write':'Read-only'} · <a href="https://nikhelbig.at" target="_blank">View site</a></div>
-  `;
+    <div class="status">Repo: ${REPO} · ${articles.length} articles · <a href="https://nikhelbig.at" target="_blank">View site</a> · <a href="https://github.com/${REPO}" target="_blank">GitHub repo</a></div>`;
   if(curSection)document.getElementById('secSelect').value=curSection;
   renderList();
 }
@@ -262,16 +179,15 @@ function renderApp(){
 function renderList(){
   const list=curSection?articles.filter(a=>a.section===curSection):articles;
   list.sort((a,b)=>(b.meta.date||'').localeCompare(a.meta.date||''));
-  
   let html='';
   list.forEach(a=>{
-    const img=a.meta.image?`<img src="https://nikhelbig.at/${a.meta.image}" onerror="this.style.display='none'">`:'<div class="ni"></div>';
+    const img=a.meta.image?`<img src="https://nikhelbig.at/${a.meta.image}" onerror="this.outerHTML='<div class=ni></div>'">`:'<div class="ni"></div>';
     html+=`<div class="row" onclick="openEditor('${a.path}')">
       ${img}
       <div><div class="row-t">${a.meta.title||a.filename}</div><div class="row-m">${SECTIONS.find(s=>s.s===a.section)?.n||a.section} · ${a.meta.date||'?'}</div></div>
       <div class="row-a" onclick="event.stopPropagation()">
         <button onclick="openEditor('${a.path}')">Edit</button>
-        <button class="del" onclick="doDelete('${a.path}')">Del</button>
+        <button onclick="doDelete('${a.path}')">Del</button>
       </div>
     </div>`;
   });
@@ -283,14 +199,14 @@ function renderList(){
 async function openEditor(path){
   document.getElementById('listArea').innerHTML='<div class="loading">Loading…</div>';
   try{
-    const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${path}?ref=main`,{mode:'cors',headers:TOKEN?{'Authorization':'token '+TOKEN}:{}});
+    const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${path}?ref=main`,{mode:'cors'});
     const d=await r.json();
     const content=atob(d.content.replace(/\n/g,''));
     const{meta,body}=parseFM(content);
     const section=path.split('/')[1];
     showEditor(meta,body,path,d.sha,section,false);
   }catch(e){
-    document.getElementById('listArea').innerHTML=`<div class="error">Error: ${e.message}</div>`;
+    document.getElementById('listArea').innerHTML=`<div class="loading" style="color:var(--red)">Error: ${e.message}</div>`;
   }
 }
 
@@ -301,7 +217,6 @@ function newArticle(){
 
 function showEditor(meta,body,path,sha,section,isNew){
   let secOpts=SECTIONS.map(s=>`<option value="${s.s}" ${s.s===section?'selected':''}>${s.n}</option>`).join('');
-  
   document.getElementById('listArea').innerHTML=`
     <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1rem">
       <h2 style="font-size:1rem;flex:1">${isNew?'New Article':'Edit Article'}</h2>
@@ -318,15 +233,14 @@ function showEditor(meta,body,path,sha,section,isNew){
     <label class="fl">Article Body (Markdown)</label>
     <textarea class="ed-body" id="eBody">${body.replace(/</g,'&lt;')}</textarea>
     <div class="ed-actions">
-      <button class="btn btn-p" onclick="doSave('${path||''}','${sha||''}',${isNew})">${isNew?'Create':'Save'} & Publish</button>
+      <button class="btn btn-g" onclick="doSave('${path||''}','${sha||''}',${isNew})">Save → GitHub</button>
       <button class="btn btn-s" onclick="renderList()">Cancel</button>
-      ${!isNew?`<button class="btn btn-d" onclick="doDelete('${path}')" style="margin-left:.5rem">Delete</button>`:''}
       <span class="ed-path">${path||'new file'}</span>
     </div>`;
 }
 
-async function doSave(path,sha,isNew){
-  if(!TOKEN){toast('Token required to save. Add your token and reconnect.',3000);return}
+// === SAVE (generates file + opens GitHub editor) ===
+function doSave(path,sha,isNew){
   const meta={
     title:document.getElementById('eTitle').value,
     date:document.getElementById('eDate').value,
@@ -334,6 +248,7 @@ async function doSave(path,sha,isNew){
     image:document.getElementById('eImg').value,
     tags:document.getElementById('eTags').value
   };
+  if(!meta.title){toast('Title is required');return}
   const body=document.getElementById('eBody').value;
   const section=document.getElementById('eSection').value;
   const content=buildFM(meta,body);
@@ -341,48 +256,58 @@ async function doSave(path,sha,isNew){
   if(isNew){
     const slug=meta.title.toLowerCase().replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-').substring(0,70);
     path=`content/${section}/${slug}.md`;
-    try{
-      toast('Creating…');
-      await ghPut(path,content,'New: '+meta.title);
-      articles.push({path,section,filename:slug+'.md',sha:null,meta,loaded:true});
-      toast('Created! Rebuilds in ~1 min.');
-      setTimeout(renderList,500);
-    }catch(e){toast('Error: '+e.message,4000)}
-  }else{
-    try{
-      toast('Saving…');
-      await ghPut(path,content,'Update: '+meta.title,sha||undefined);
-      const idx=articles.findIndex(a=>a.path===path);
-      if(idx>=0)articles[idx].meta=meta;
-      toast('Saved! Rebuilds in ~1 min.');
-      setTimeout(renderList,500);
-    }catch(e){toast('Error: '+e.message,4000)}
   }
+
+  const ghEditUrl=isNew
+    ?`https://github.com/${REPO}/new/main?filename=${path}&value=${encodeURIComponent(content)}`
+    :`https://github.com/${REPO}/edit/main/${path}`;
+
+  document.getElementById('listArea').innerHTML=`
+    <div class="manual-box">
+      <h3>${isNew?'Create':'Update'}: ${meta.title}</h3>
+      <ol>
+        <li><strong>Copy</strong> the file content below (click the green button)</li>
+        <li><strong>Open</strong> <a href="${ghEditUrl}" target="_blank">GitHub editor for this file ↗</a></li>
+        <li>${isNew?'The content should auto-fill. If not, paste it.':'Press <strong>Ctrl+A</strong> (or Cmd+A) to select all, then <strong>Ctrl+V</strong> (Cmd+V) to paste and replace'}</li>
+        <li>Click the green <strong>"Commit changes"</strong> button</li>
+        <li>Your site will rebuild automatically in ~1-2 minutes</li>
+      </ol>
+      <button class="btn btn-g" onclick="copyContent()" id="copyBtn">Copy file content to clipboard</button>
+      <button class="btn btn-s" onclick="renderList()" style="margin-left:.4rem">← Back to list</button>
+      <textarea class="manual-code" id="manualContent" readonly style="margin-top:.8rem">${content.replace(/</g,'&lt;')}</textarea>
+    </div>`;
+  
+  // Store for copying
+  document.getElementById('manualContent').dataset.raw=content;
 }
 
-async function doDelete(path){
+function copyContent(){
+  const content=document.getElementById('manualContent').dataset.raw;
+  navigator.clipboard.writeText(content).then(()=>{
+    document.getElementById('copyBtn').textContent='✓ Copied! Now open the GitHub link above';
+    toast('Copied to clipboard!');
+  }).catch(()=>{
+    // Fallback: select the textarea
+    const ta=document.getElementById('manualContent');
+    ta.select();
+    document.execCommand('copy');
+    toast('Copied!');
+  });
+}
+
+// === DELETE ===
+function doDelete(path){
   const a=articles.find(x=>x.path===path);
-  if(!confirm(`Delete "${a?.meta?.title||path}"?`))return;
-  if(!TOKEN){toast('Token required to delete.',3000);return}
-  try{
-    toast('Deleting…');
-    const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${path}?ref=main`,{mode:'cors',headers:{'Authorization':'token '+TOKEN}});
-    const d=await r.json();
-    await ghDel(path,d.sha,'Delete: '+(a?.meta?.title||path));
-    articles=articles.filter(x=>x.path!==path);
-    toast('Deleted.');
-    renderList();
-  }catch(e){toast('Error: '+e.message,4000)}
+  const title=a?.meta?.title||path;
+  if(!confirm(`Delete "${title}"?\n\nYou'll be taken to GitHub to confirm.`))return;
+  window.open(`https://github.com/${REPO}/delete/main/${path}`,'_blank');
+  toast('Delete page opened in GitHub');
 }
 
-// Auto-connect
+// Auto-load
 window.addEventListener('DOMContentLoaded',()=>{
-  const t=sessionStorage.getItem('gh_token');
   const r=sessionStorage.getItem('gh_repo');
-  if(t!==null){
-    document.getElementById('tokenInput').value=t;
-    if(r)document.getElementById('repoInput').value=r;
-  }
+  if(r)document.getElementById('repoInput').value=r;
 });
 </script>
 </body>
