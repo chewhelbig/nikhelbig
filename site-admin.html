@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Admin — The Psychotherapist</title>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf8f5;
+  --surface: #fff;
+  --surface2: #f3f0eb;
+  --border: #e2ddd5;
+  --text: #2c2417;
+  --text-dim: #8a7e6e;
+  --accent: #6b4c2a;
+  --accent-light: #a17b4a;
+  --accent-bg: rgba(107,76,42,.06);
+  --green: #3d7a4f;
+  --green-bg: rgba(61,122,79,.08);
+  --red: #a13b3b;
+  --red-bg: rgba(161,59,59,.08);
+  --blue: #3b6fa1;
+  --radius: 6px;
+  --shadow: 0 1px 3px rgba(0,0,0,.06);
+  --font-body: 'Literata', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; }
+
+/* Layout */
+.app { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+  background: var(--text);
+  color: var(--surface2);
+  padding: 1.5rem 0;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.sidebar-brand {
+  padding: 0 1.2rem 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  margin-bottom: .8rem;
+}
+.sidebar-brand h1 { font-size: .95rem; font-weight: 600; color: #fff; letter-spacing: -.01em; }
+.sidebar-brand p { font-size: .68rem; color: rgba(255,255,255,.4); margin-top: .15rem; }
+
+.sidebar-section { padding: .4rem 0; }
+.sidebar-section-title {
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.3);
+  padding: .5rem 1.2rem .3rem;
+}
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem 1.2rem;
+  font-size: .8rem;
+  color: rgba(255,255,255,.6);
+  cursor: pointer;
+  transition: all .1s;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-body);
+}
+.sidebar-item:hover { background: rgba(255,255,255,.06); color: #fff; }
+.sidebar-item.active { background: rgba(255,255,255,.1); color: #fff; }
+.sidebar-item .count {
+  margin-left: auto;
+  font-size: .65rem;
+  background: rgba(255,255,255,.1);
+  padding: .1rem .45rem;
+  border-radius: 10px;
+}
+
+.sidebar-btn {
+  display: block;
+  margin: .8rem 1.2rem;
+  padding: .55rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: .8rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background .15s;
+}
+.sidebar-btn:hover { background: var(--accent-light); }
+
+/* Main */
+.main { padding: 2rem 2.5rem; max-width: 900px; }
+
+/* Auth */
+.auth-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 450px;
+  margin: 3rem auto;
+  box-shadow: var(--shadow);
+}
+.auth-panel h2 { font-size: 1.1rem; margin-bottom: .5rem; }
+.auth-panel p { font-size: .8rem; color: var(--text-dim); margin-bottom: 1rem; }
+.auth-panel a { color: var(--blue); }
+
+.form-group { margin-bottom: 1rem; }
+.form-label { display: block; font-size: .75rem; font-weight: 600; margin-bottom: .3rem; color: var(--text-dim); }
+.form-input {
+  width: 100%;
+  padding: .55rem .7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+}
+.form-input:focus { border-color: var(--accent); }
+.form-btn {
+  padding: .55rem 1.2rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: .82rem;
+  cursor: pointer;
+}
+.form-btn:hover { background: var(--accent-light); }
+.form-btn.danger { background: var(--red); }
+.form-btn.danger:hover { background: #c04848; }
+.form-btn.secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+
+/* Article list */
+.page-title { font-size: 1.3rem; margin-bottom: .3rem; }
+.page-sub { font-size: .8rem; color: var(--text-dim); margin-bottom: 1.5rem; }
+
+.article-row {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: .8rem;
+  align-items: center;
+  padding: .7rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: .4rem;
+  cursor: pointer;
+  transition: border-color .1s;
+}
+.article-row:hover { border-color: var(--accent); }
+.article-row img { width: 60px; height: 42px; object-fit: cover; border-radius: 3px; background: var(--surface2); }
+.article-row .no-img { width: 60px; height: 42px; border-radius: 3px; background: var(--surface2); }
+.article-row-title { font-size: .85rem; font-weight: 600; }
+.article-row-meta { font-size: .68rem; color: var(--text-dim); }
+.article-row-actions { display: flex; gap: .3rem; }
+.article-row-actions button {
+  background: none; border: 1px solid var(--border); border-radius: 4px;
+  padding: .25rem .5rem; font-size: .68rem; cursor: pointer; color: var(--text-dim);
+  font-family: var(--font-body);
+}
+.article-row-actions button:hover { border-color: var(--accent); color: var(--accent); }
+.article-row-actions button.del:hover { border-color: var(--red); color: var(--red); }
+
+/* Editor */
+.editor-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.editor-header h2 { flex: 1; font-size: 1.1rem; }
+.editor-meta { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin-bottom: 1rem; }
+.editor-meta-full { grid-column: 1 / -1; }
+
+textarea.editor-body {
+  width: 100%;
+  min-height: 450px;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  line-height: 1.65;
+  background: var(--surface);
+  color: var(--text);
+  resize: vertical;
+  outline: none;
+  tab-size: 2;
+}
+textarea.editor-body:focus { border-color: var(--accent); }
+
+.editor-actions {
+  display: flex;
+  gap: .5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--text);
+  color: #fff;
+  padding: .6rem 1.2rem;
+  border-radius: var(--radius);
+  font-size: .8rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .3s;
+  z-index: 999;
+}
+.toast.show { opacity: 1; transform: translateY(0); }
+
+.loading { text-align: center; padding: 3rem; color: var(--text-dim); font-size: .85rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app { grid-template-columns: 1fr; }
+  .sidebar { position: fixed; left: -280px; z-index: 50; width: 260px; transition: left .2s; }
+  .sidebar.open { left: 0; }
+  .main { padding: 1.2rem; }
+  .editor-meta { grid-template-columns: 1fr; }
+  .mobile-toggle {
+    display: block !important;
+    position: fixed; top: .8rem; left: .8rem; z-index: 51;
+    background: var(--text); color: #fff; border: none; border-radius: 4px;
+    padding: .4rem .6rem; font-size: .9rem; cursor: pointer;
+  }
+}
+.mobile-toggle { display: none; }
+</style>
+</head>
+<body>
+
+<button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <h1>Site Admin</h1>
+      <p>The Psychotherapist</p>
+    </div>
+    <button class="sidebar-btn" onclick="newArticle()">+ New Article</button>
+    <div class="sidebar-section" id="sidebarSections"></div>
+    <div style="padding:1.2rem;margin-top:auto">
+      <div style="font-size:.65rem;color:rgba(255,255,255,.3)">
+        <a href="https://nikhelbig.at" target="_blank" style="color:rgba(255,255,255,.4);text-decoration:none">View live site →</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main" id="main">
+    <!-- Auth screen shown first -->
+    <div class="auth-panel" id="authPanel">
+      <h2>Connect to GitHub</h2>
+      <p>This admin panel reads and writes directly to your GitHub repo. You need a <a href="https://github.com/settings/tokens/new?scopes=repo&description=Site+Admin+nikhelbig" target="_blank">Personal Access Token</a> with <strong>repo</strong> scope.</p>
+      <div class="form-group">
+        <label class="form-label">GitHub Personal Access Token</label>
+        <input type="password" class="form-input" id="tokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Repository (owner/repo)</label>
+        <input type="text" class="form-input" id="repoInput" value="chewhelbig/nikhelbig">
+      </div>
+      <button class="form-btn" onclick="connect()">Connect</button>
+      <p style="font-size:.68rem;color:var(--text-dim);margin-top:.8rem">Your token is stored only in your browser's local memory (sessionStorage). It is never sent anywhere except GitHub's API.</p>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ============================================
+// CONFIG & STATE
+// ============================================
+let TOKEN = '';
+let REPO = 'chewhelbig/nikhelbig';
+let articles = [];
+let currentSection = null;
+let currentArticle = null;
+
+const SECTIONS = [
+  {slug:'gestalt-therapy', name:'Gestalt Therapy'},
+  {slug:'gestalt-therapy-books', name:'Gestalt Therapy Books'},
+  {slug:'psychotherapy-practice', name:'Psychotherapy Practice'},
+  {slug:'psychotherapy-articles', name:'Articles on Psychotherapy'},
+  {slug:'couples-and-family', name:'Couples & Family'},
+  {slug:'childhood-trauma', name:'Childhood Trauma'},
+  {slug:'psychoanalysis', name:'Psychoanalysis'},
+  {slug:'diagnosis', name:'Diagnosis'},
+  {slug:'neuroscience', name:'Neuroscience'},
+  {slug:'cultural-anthropology', name:'Cultural Anthropology'},
+  {slug:'theses-and-publications', name:'Theses & Publications'},
+  {slug:'art', name:'Art'},
+  {slug:'lectures', name:'Lectures'},
+  {slug:'personality', name:'Personality'},
+  {slug:'therapy-books', name:'Therapy Books'},
+  {slug:'general-psychology', name:'General Psychology'},
+];
+
+// ============================================
+// GITHUB API
+// ============================================
+async function gh(endpoint, opts = {}) {
+  const url = `https://api.github.com/repos/${REPO}/${endpoint}`;
+  const res = await fetch(url, {
+    headers: {
+      'Authorization': `Bearer ${TOKEN}`,
+      'Accept': 'application/vnd.github+json',
+      ...opts.headers
+    },
+    ...opts
+  });
+  if (!res.ok) throw new Error(`GitHub API error: ${res.status} ${res.statusText}`);
+  return res.json();
+}
+
+async function getContents(path) {
+  return gh(`contents/${path}?ref=main`);
+}
+
+async function getFile(path) {
+  const data = await gh(`contents/${path}?ref=main`);
+  const content = atob(data.content.replace(/\n/g, ''));
+  return { content, sha: data.sha, path: data.path };
+}
+
+async function putFile(path, content, message, sha = null) {
+  const body = {
+    message,
+    content: btoa(unescape(encodeURIComponent(content))),
+    branch: 'main'
+  };
+  if (sha) body.sha = sha;
+  return gh(`contents/${path}`, {
+    method: 'PUT',
+    body: JSON.stringify(body)
+  });
+}
+
+async function deleteFile(path, sha, message) {
+  return gh(`contents/${path}`, {
+    method: 'DELETE',
+    body: JSON.stringify({ message, sha, branch: 'main' })
+  });
+}
+
+// ============================================
+// MARKDOWN FRONT MATTER PARSER
+// ============================================
+function parseFrontMatter(text) {
+  const match = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  if (!match) return { meta: {}, body: text };
+  const meta = {};
+  match[1].split('\n').forEach(line => {
+    const m = line.match(/^(\w+):\s*"?(.*?)"?\s*$/);
+    if (m) meta[m[1]] = m[2].replace(/^"|"$/g, '');
+  });
+  return { meta, body: match[2] };
+}
+
+function buildFrontMatter(meta, body) {
+  let fm = '---\n';
+  fm += `title: "${meta.title || ''}"\n`;
+  fm += `date: ${meta.date || new Date().toISOString().split('T')[0]}\n`;
+  fm += `draft: ${meta.draft || 'false'}\n`;
+  if (meta.description) fm += `description: "${meta.description}"\n`;
+  if (meta.image) fm += `image: "${meta.image}"\n`;
+  if (meta.tags) fm += `tags: [${meta.tags.split(',').map(t => `"${t.trim()}"`).join(', ')}]\n`;
+  if (meta.original_url) fm += `original_url: "${meta.original_url}"\n`;
+  fm += '---\n\n';
+  return fm + body;
+}
+
+// ============================================
+// UI RENDERING
+// ============================================
+function toast(msg, duration = 2500) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), duration);
+}
+
+function renderSidebar() {
+  const el = document.getElementById('sidebarSections');
+  let html = '<div class="sidebar-section-title">Sections</div>';
+  SECTIONS.forEach(s => {
+    const count = articles.filter(a => a.section === s.slug).length;
+    html += `<button class="sidebar-item ${currentSection === s.slug ? 'active' : ''}" onclick="showSection('${s.slug}')">
+      ${s.name}
+      <span class="count">${count}</span>
+    </button>`;
+  });
+  // All articles button
+  html = `<button class="sidebar-item ${currentSection === null ? 'active' : ''}" onclick="showSection(null)">
+    All Articles <span class="count">${articles.length}</span>
+  </button>` + html;
+  el.innerHTML = html;
+}
+
+function showSection(slug) {
+  currentSection = slug;
+  renderSidebar();
+  renderArticleList();
+}
+
+function renderArticleList() {
+  const filtered = currentSection
+    ? articles.filter(a => a.section === currentSection)
+    : articles;
+  const sectionName = currentSection
+    ? SECTIONS.find(s => s.slug === currentSection)?.name || currentSection
+    : 'All Articles';
+
+  let html = `<h1 class="page-title">${sectionName}</h1>`;
+  html += `<p class="page-sub">${filtered.length} article${filtered.length !== 1 ? 's' : ''}</p>`;
+
+  filtered.sort((a, b) => (b.meta.date || '').localeCompare(a.meta.date || ''));
+
+  filtered.forEach(a => {
+    const imgSrc = a.meta.image ? `https://nikhelbig.at/${a.meta.image}` : '';
+    html += `<div class="article-row" onclick="editArticle('${a.path}')">
+      ${imgSrc ? `<img src="${imgSrc}" loading="lazy" onerror="this.style.display='none'">` : '<div class="no-img"></div>'}
+      <div>
+        <div class="article-row-title">${a.meta.title || a.filename}</div>
+        <div class="article-row-meta">${a.section} · ${a.meta.date || 'no date'}</div>
+      </div>
+      <div class="article-row-actions" onclick="event.stopPropagation()">
+        <button onclick="editArticle('${a.path}')">Edit</button>
+        <button class="del" onclick="confirmDelete('${a.path}','${a.sha}')">Delete</button>
+      </div>
+    </div>`;
+  });
+
+  document.getElementById('main').innerHTML = html;
+}
+
+async function editArticle(path) {
+  document.getElementById('main').innerHTML = '<div class="loading">Loading article…</div>';
+  try {
+    const file = await getFile(path);
+    const { meta, body } = parseFrontMatter(file.content);
+    const section = path.split('/')[1];
+
+    let html = `<div class="editor-header">
+      <h2>Edit Article</h2>
+      <button class="form-btn secondary" onclick="showSection('${section}')">← Back</button>
+    </div>`;
+
+    html += `<div class="editor-meta">
+      <div class="form-group editor-meta-full">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-input" id="ed-title" value="${(meta.title || '').replace(/"/g, '&quot;')}">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Date</label>
+        <input type="date" class="form-input" id="ed-date" value="${(meta.date || '').substring(0, 10)}">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Image path</label>
+        <input type="text" class="form-input" id="ed-image" value="${meta.image || ''}" placeholder="wp-content/uploads/2023/02/file.jpg">
+      </div>
+      <div class="form-group editor-meta-full">
+        <label class="form-label">Description</label>
+        <input type="text" class="form-input" id="ed-desc" value="${(meta.description || '').replace(/"/g, '&quot;')}">
+      </div>
+      <div class="form-group editor-meta-full">
+        <label class="form-label">Tags (comma separated)</label>
+        <input type="text" class="form-input" id="ed-tags" value="${Array.isArray(meta.tags) ? meta.tags.join(', ') : (meta.tags || '')}">
+      </div>
+    </div>`;
+
+    html += `<label class="form-label">Article Body (Markdown)</label>
+    <textarea class="editor-body" id="ed-body">${body.replace(/</g, '&lt;')}</textarea>`;
+
+    html += `<div class="editor-actions">
+      <button class="form-btn" onclick="saveArticle('${path}','${file.sha}')">Save & Publish</button>
+      <button class="form-btn secondary" onclick="showSection('${section}')">Cancel</button>
+      <div style="flex:1"></div>
+      <span style="font-size:.68rem;color:var(--text-dim);align-self:center">${path}</span>
+    </div>`;
+
+    document.getElementById('main').innerHTML = html;
+  } catch (e) {
+    document.getElementById('main').innerHTML = `<p style="color:var(--red)">Error loading: ${e.message}</p>`;
+  }
+}
+
+async function saveArticle(path, sha) {
+  const meta = {
+    title: document.getElementById('ed-title').value,
+    date: document.getElementById('ed-date').value,
+    image: document.getElementById('ed-image').value,
+    description: document.getElementById('ed-desc').value,
+    tags: document.getElementById('ed-tags').value,
+    draft: 'false'
+  };
+  const body = document.getElementById('ed-body').value;
+  const content = buildFrontMatter(meta, body);
+
+  try {
+    toast('Saving…');
+    await putFile(path, content, `Update: ${meta.title}`, sha);
+    toast('Saved! Site will rebuild in ~1 min.');
+    // Refresh article in memory
+    const idx = articles.findIndex(a => a.path === path);
+    if (idx >= 0) {
+      articles[idx].meta = meta;
+    }
+    const section = path.split('/')[1];
+    setTimeout(() => showSection(section), 500);
+  } catch (e) {
+    toast('Error saving: ' + e.message, 4000);
+  }
+}
+
+function newArticle() {
+  const section = currentSection || 'psychotherapy-articles';
+  const sectionName = SECTIONS.find(s => s.slug === section)?.name || section;
+
+  let sectionOptions = SECTIONS.map(s =>
+    `<option value="${s.slug}" ${s.slug === section ? 'selected' : ''}>${s.name}</option>`
+  ).join('');
+
+  let html = `<div class="editor-header">
+    <h2>New Article</h2>
+    <button class="form-btn secondary" onclick="showSection('${section}')">← Back</button>
+  </div>`;
+
+  html += `<div class="editor-meta">
+    <div class="form-group editor-meta-full">
+      <label class="form-label">Title</label>
+      <input type="text" class="form-input" id="ed-title" placeholder="Your article title">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Section</label>
+      <select class="form-input" id="ed-section">${sectionOptions}</select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Date</label>
+      <input type="date" class="form-input" id="ed-date" value="${new Date().toISOString().split('T')[0]}">
+    </div>
+    <div class="form-group editor-meta-full">
+      <label class="form-label">Image path (optional)</label>
+      <input type="text" class="form-input" id="ed-image" placeholder="wp-content/uploads/2023/02/file.jpg">
+    </div>
+    <div class="form-group editor-meta-full">
+      <label class="form-label">Description</label>
+      <input type="text" class="form-input" id="ed-desc" placeholder="Brief description for listings and SEO">
+    </div>
+    <div class="form-group editor-meta-full">
+      <label class="form-label">Tags (comma separated)</label>
+      <input type="text" class="form-input" id="ed-tags" placeholder="psychotherapy, gestalt therapy">
+    </div>
+  </div>`;
+
+  html += `<label class="form-label">Article Body (Markdown)</label>
+  <textarea class="editor-body" id="ed-body" placeholder="Write your article here in Markdown…
+
+## Section Heading
+
+Your text goes here. Use **bold** and *italic* for emphasis.
+
+> Blockquotes look like this.
+
+### References
+
+Author, A. (Year). *Title*. Publisher."></textarea>`;
+
+  html += `<div class="editor-actions">
+    <button class="form-btn" onclick="createArticle()">Create & Publish</button>
+    <button class="form-btn secondary" onclick="showSection('${section}')">Cancel</button>
+  </div>`;
+
+  document.getElementById('main').innerHTML = html;
+}
+
+async function createArticle() {
+  const title = document.getElementById('ed-title').value;
+  if (!title) { toast('Title is required'); return; }
+
+  const section = document.getElementById('ed-section').value;
+  const slug = title.toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .substring(0, 70);
+  const path = `content/${section}/${slug}.md`;
+
+  const meta = {
+    title,
+    date: document.getElementById('ed-date').value,
+    image: document.getElementById('ed-image').value,
+    description: document.getElementById('ed-desc').value,
+    tags: document.getElementById('ed-tags').value,
+    draft: 'false'
+  };
+  const body = document.getElementById('ed-body').value;
+  const content = buildFrontMatter(meta, body);
+
+  try {
+    toast('Creating…');
+    await putFile(path, content, `New article: ${title}`);
+    toast('Created! Site will rebuild in ~1 min.');
+    articles.push({ path, section, filename: slug + '.md', meta, sha: null });
+    renderSidebar();
+    setTimeout(() => showSection(section), 500);
+  } catch (e) {
+    toast('Error: ' + e.message, 4000);
+  }
+}
+
+async function confirmDelete(path, sha) {
+  const title = articles.find(a => a.path === path)?.meta?.title || path;
+  if (!confirm(`Delete "${title}"?\n\nThis cannot be undone.`)) return;
+  try {
+    toast('Deleting…');
+    // Need fresh sha
+    const file = await getFile(path);
+    await deleteFile(path, file.sha, `Delete: ${title}`);
+    articles = articles.filter(a => a.path !== path);
+    toast('Deleted.');
+    renderSidebar();
+    renderArticleList();
+  } catch (e) {
+    toast('Error: ' + e.message, 4000);
+  }
+}
+
+// ============================================
+// CONNECTION & LOADING
+// ============================================
+async function connect() {
+  TOKEN = document.getElementById('tokenInput').value.trim();
+  REPO = document.getElementById('repoInput').value.trim();
+  if (!TOKEN) { toast('Enter your token'); return; }
+
+  sessionStorage.setItem('gh_token', TOKEN);
+  sessionStorage.setItem('gh_repo', REPO);
+
+  document.getElementById('main').innerHTML = '<div class="loading">Connecting and loading articles…</div>';
+
+  try {
+    // Test connection
+    await gh('');
+    await loadAllArticles();
+    renderSidebar();
+    showSection(null);
+    toast('Connected!');
+  } catch (e) {
+    document.getElementById('main').innerHTML = `<div class="auth-panel">
+      <h2>Connection Failed</h2>
+      <p style="color:var(--red)">${e.message}</p>
+      <p>Check your token and repo name, then try again.</p>
+      <div class="form-group">
+        <label class="form-label">GitHub Personal Access Token</label>
+        <input type="password" class="form-input" id="tokenInput" value="${TOKEN}">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Repository</label>
+        <input type="text" class="form-input" id="repoInput" value="${REPO}">
+      </div>
+      <button class="form-btn" onclick="connect()">Retry</button>
+    </div>`;
+  }
+}
+
+async function loadAllArticles() {
+  articles = [];
+  for (const section of SECTIONS) {
+    try {
+      const files = await getContents(`content/${section.slug}`);
+      for (const f of files) {
+        if (f.name === '_index.md' || !f.name.endsWith('.md')) continue;
+        // Get basic info from filename, full content loaded on edit
+        articles.push({
+          path: f.path,
+          section: section.slug,
+          filename: f.name,
+          sha: f.sha,
+          meta: { title: f.name.replace('.md', '').replace(/-/g, ' '), date: '' }
+        });
+      }
+    } catch (e) {
+      // Section might not exist yet
+    }
+  }
+
+  // Now load front matter for each (in parallel batches)
+  const batchSize = 10;
+  for (let i = 0; i < articles.length; i += batchSize) {
+    const batch = articles.slice(i, i + batchSize);
+    await Promise.all(batch.map(async (a) => {
+      try {
+        const file = await getFile(a.path);
+        const { meta } = parseFrontMatter(file.content);
+        a.meta = meta;
+        a.sha = file.sha;
+      } catch (e) { /* skip */ }
+    }));
+    // Update loading message
+    document.getElementById('main').innerHTML =
+      `<div class="loading">Loading articles… ${Math.min(i + batchSize, articles.length)} / ${articles.length}</div>`;
+  }
+}
+
+// Auto-connect if token saved
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = sessionStorage.getItem('gh_token');
+  const savedRepo = sessionStorage.getItem('gh_repo');
+  if (saved) {
+    document.getElementById('tokenInput').value = saved;
+    if (savedRepo) document.getElementById('repoInput').value = savedRepo;
+    connect();
+  }
+});
+</script>
+</body>
+</html>
