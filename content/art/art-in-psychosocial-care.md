@@ -5,7 +5,7 @@ draft: false
 description: "## Introduction  The organizations like Atelier 10, and Atelier Gugging in Vienna, Austria discussed in this essay, are 2 of many psychosocial initiatives that can be found in Vienna today. Both..."
 tags: ["art", "mental illness", "psychosocial care"]
 original_url: "/art-in-psychosocial-care/"
-image: "wp-content/uploads/2017/11/mourning_in_surrealism_in_vivid_colors_7.jpg"
+image: "wp-content/uploads/2018/12/dialogue_in_the_style_of_surrealism_6.jpg"
 ---
 
 ## Introduction
