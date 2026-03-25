@@ -1,0 +1,1 @@
+{{ $src := .Destination }}{{ if not (hasPrefix $src "/") }}{{ if not (hasPrefix $src "http") }}{{ $src = print "/" $src }}{{ end }}{{ end }}<img src="{{ $src }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy">
