@@ -4,7 +4,7 @@ date: 2024-06-01
 draft: false
 description: "How Gestalt therapy synthesised psychoanalytic theory, Gestalt psychology's principles of perception, and Lewinian field theory into a distinctive therapeutic approach."
 tags: ["Gestalt Therapy", "psychoanalysis", "Gestalt psychology", "field theory", "Fritz Perls"]
-image: "wp-content/uploads/2023/01/gestalt_therapy_concept_1.jpg"
+image: "wp-content/uploads/2022/12/characters_in_therapy_midcentury_modern_7.jpg"
 original_url: "https://nikhelbig.at/gestalt-therapy-a-tapestry-woven-from-psychoanalysis-gestalt-psychology-and-field-theory/"
 ---
 
