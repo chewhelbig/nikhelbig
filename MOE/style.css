@@ -74,6 +74,17 @@ a:hover{text-decoration:underline}
 .article h2{font-size:24px;color:var(--slate);margin:34px 0 12px}
 .article h2:first-child{margin-top:0}
 .article p{font-size:18px;margin-bottom:10px}
+
+/* key points */
+.keypoints{background:var(--cream);border-radius:16px;padding:34px 36px;margin:42px 0 10px}
+.keypoints h2{margin:0 0 20px;color:var(--dark)}
+.kp-list{list-style:none;display:grid;gap:16px}
+.kp{display:flex;align-items:flex-start;gap:18px}
+.kp-num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--sage);color:var(--dark);
+  font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
+.kp-text{font-size:17px;line-height:1.55}
+.kp-source{margin-top:24px;color:var(--mute);font-size:14px;font-style:italic}
+
 .try{background:var(--sagel);border-radius:14px;padding:26px 30px;margin:38px 0 10px}
 .try-label{color:var(--accent);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:14px;margin-bottom:8px}
 .try p{margin:0}
@@ -98,6 +109,7 @@ a:hover{text-decoration:underline}
   .hero-inner{padding:84px 24px 90px}
   .two-col{grid-template-columns:1fr;gap:26px}
   .phero h1{font-size:34px}
+  .keypoints{padding:26px 22px}
   .foot-inner{flex-direction:column}
   .foot-contact{text-align:left}
   .flow-row{flex-wrap:wrap}
